@@ -161,7 +161,7 @@ color:rgb(31, 33, 34);;
 }
 
 .menu-banner{
-    background-image: url(/images/promo1.jpg);
+    background-image: url(images/promo1.jpg);
     background-position: center;
     background-size: cover;
     width: 100%;
