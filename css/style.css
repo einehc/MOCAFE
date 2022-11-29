@@ -37,6 +37,13 @@ body {
 }
 
 
+
+
+
+
+
+
+
 #home{
     background-image: url(https://www.tapmango.com/wp-content/uploads/2017/10/coffee-background-1.jpg);
     background-size: cover;
@@ -151,31 +158,32 @@ color: rgb(240, 241, 240);
     height: auto;
 }
 
-.menu-banner{
-    background-image: url(https://cdn.pixabay.com/photo/2016/12/17/13/34/coffee-1913471_960_720.jpg);
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 300px;
-}
-
-
-.menu-banner button{
+.nav button{
     background-color: rgb(140, 98, 57);
     color: rgb(240, 241, 240);
     font-family: 'Roboto Condensed', sans-serif;
     border: none;
 }
 
-
-.menu-header{
-    font-family: 'Roboto Slab', serif;
-    height: 60px;
-    width: 100%;
-    text-align: center;
-    color: rgb(240, 241, 240);
+.nav button:hover{
+    background-color: rgb(89, 97, 100);
 }
 
+.header{
+    background-image: url(https://cdn.pixabay.com/photo/2016/12/17/13/34/coffee-1913471_960_720.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    
+}
+
+.header h1{
+    font-family: 'Roboto Slab', serif;
+    color: rgb(31, 33, 34,0.70);
+    padding-top: 70px;
+    text-align: center;
+}
 
 .menu-text{
  font-family: 'Roboto Condensed', sans-serif;
@@ -216,7 +224,7 @@ color: rgb(240, 241, 240);
 .menu-list{
     font-family: 'Roboto Condensed', sans-serif;
     color: rgb(240, 241, 240);
-    height: 400px;
+    height: 300px;
     width: 250px;
     border-style: solid;
     border-radius: 30px;
@@ -232,11 +240,6 @@ color: rgb(240, 241, 240);
 .menu-list span{
     font-size:medium;
 } 
-
-.menu-list p{
-    font-size: small;
-    text-align: center;
-}
 
 .menu-list button{
     background-color: rgb(140, 98, 57);
