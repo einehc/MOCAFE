@@ -170,7 +170,7 @@ color: rgb(240, 241, 240);
 }
 
 .header{
-    background-image: url(/images/banner.jpg);
+    background-image: url(https://premiervendgroup.com/blog/wp-content/uploads/2021/07/AdobeStock_167890842-scaled.jpeg);
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -178,11 +178,12 @@ color: rgb(240, 241, 240);
     
 }
 
-.header h1{
+.header p{
     font-family: 'Roboto Slab', serif;
-    color: rgb(31, 33, 34,0.70);
+    color: rgb(240, 241, 240);
     padding-top: 70px;
     text-align: center;
+    font-size: 50px;
 }
 
 .menu-text{
