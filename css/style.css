@@ -170,7 +170,7 @@ color: rgb(240, 241, 240);
 }
 
 .header{
-    background-image: url(images/banner.jpg);
+    background-image: url(/images/banner.jpg);
     background-position: center;
     background-size: cover;
     width: 100%;
