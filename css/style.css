@@ -6,47 +6,101 @@ font-family: 'Roboto Slab', serif; */
 body {
     margin:0;
     background-color:  rgb(31, 33, 34);
+    overflow-x: hidden;
     height: 1000px;
 }
 
 
-.nav {
-    background-color:  rgb(31, 33, 34);
-    width: 100%;
-    position: fixed;
-    top: 0px;
-    z-index: 1;
+/* NAVIGATION */
 
-}
-
-.nav-links a{
-    font-family: 'Roboto Slab', serif; 
-    text-decoration: none;
-    color: rgb(240, 241, 240);
-}
-
-.nav-links a:hover{
-    font-family: 'Roboto Slab', serif; 
-    text-decoration: underline;
-    color: rgb(140, 98, 57);
-}
-
-
-.nav button{
-    background-color: rgb(140, 98, 57);
-    color: rgb(240, 241, 240);
-    font-family: 'Roboto Condensed', sans-serif;
-    border: none;
-}
-
-.nav button:hover{
-    background-color: rgb(89, 97, 100);
-}
-.logo img{
-    height:50px;
-    width: 50px;
-}
-
+    
+    
+    header{
+        background-color:  rgb(31, 33, 34);
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        top: 0;
+    }
+    
+    .logo img{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .nav-group{
+    /* background-color: pink; */
+    margin-top: 10px;
+    height: 60px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    } 
+    
+    header ul{ 
+        position: relative;
+        display: flex;
+        gap: 30px;
+    }
+    
+    header ul li{
+    font-family: 'Roboto Slab', serif;
+    list-style: none;
+    }
+    
+    header ul li a{
+        position: relative;
+        text-decoration: none;
+        color:rgb(240, 241, 240);
+        letter-spacing: 0.2em ;
+        }
+    
+    
+     header ul li a:hover{
+        color: rgb(140, 98, 57);
+        }
+    
+    header ul li a::before
+    {
+        content:'';
+        position: absolute;
+        bottom: -2px;
+        width: 100%;
+        height: 2px;
+        background-color: rgb(140, 98, 57);
+        transform: scaleX(0);
+        transition: transform 0.5s ease-in-out;
+        transform-origin:right;
+    }
+    
+    
+    header ul li a:hover::before
+    {
+        transform: scaleX(1);
+        transform-origin:left;
+    }
+    
+    header button{
+        background-color: rgb(140, 98, 57);
+        color: rgb(240, 241, 240);
+        font-family: 'Roboto Condensed', sans-serif;
+        border: none;
+    }
+    
+    header button:hover{
+        background-color: rgb(89, 97, 100);
+    }
+    
+    
+    .menuToggle{
+      position: relative;  
+      display: none;
+      margin-left: 15px;
+    }
+    
+    
+    
 
 
 
@@ -192,6 +246,7 @@ color: rgb(240, 241, 240);
 .download-menu{
     width: 100%;
     text-align: end;
+   
 }
 
 .download-menu button{
@@ -200,10 +255,13 @@ color: rgb(240, 241, 240);
    font-family: 'Roboto Condensed', sans-serif;
    border: none;
    font-size: medium;
-   border-radius: 20px;
+   border-radius: 30px;
+   padding:10px;
 }
 
-
+.download-menu button:hover{
+    background-color: rgb(89, 97, 100);
+}
 
 .menu-list{
     font-family: 'Roboto Condensed', sans-serif;
@@ -246,7 +304,7 @@ color: rgb(240, 241, 240);
 background-color: black;
 width:100%;
 height: 100vh;
-color: white;
+color: rgb(240, 241, 240);
 
 }
 
@@ -255,7 +313,7 @@ color: white;
 
 #testimonials{
     background-color: gray;
-    color: white;
+    color: rgb(240, 241, 240);
     width: 100%;
     height: 100vh;
 }  
@@ -319,7 +377,7 @@ width:80%;
 
 
 .send-message button:hover{
-    background-color:  rgb(89, 97, 100);
+    background-color:  rgb(140, 98, 57);
 } 
 
 .contact-right a{
@@ -343,7 +401,7 @@ color: rgb(240, 241, 240);
 
 
 .contact-right button:hover{
-    background-color:  rgb(89, 97, 100);
+    background-color:  rgb(140, 98, 57);
     }
 
 
@@ -356,3 +414,48 @@ color: rgb(240, 241, 240);
     
 }  
 
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px){
+    
+    
+    .menuToggle{
+        position: absolute;
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        transform: translate(30px);
+        z-index: 10;
+        left: 0;
+        color: rgb(240, 241, 240);
+    }
+    
+    header .navigation{
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        left:100%;
+    }
+
+
+    header.open .navigation{
+        top:50px;
+        opacity: 1;
+        visibility: visible;
+        left:0;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(31, 33, 34);
+        width: 100%;
+        height: calc (100vh - 80px);
+        padding: 40px;
+    }
+
+    header.open .navigation li a {
+       font-size: 1.25em; 
+    }
+
+
+}
