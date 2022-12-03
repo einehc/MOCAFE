@@ -1,9 +1,13 @@
 //NAVIGATION TOGGLE
-// let navigation = document.querySelector(".navigation");
-let menuToggle = document.querySelector (".menuToggle");
+let menuToggle = document.querySelector ("#menuToggle");
 let header = document.querySelector ("header");
 
-
 menuToggle.onclick = function(){
-    header.classList.toggle ('open');
+    header.classList.toggle ('active');
+}
+
+document.onclick = function(clickEvent){
+    if (clickEvent.target.id !== 'menuToggle'){
+        header.classList.remove ('active');
+    }
 }
