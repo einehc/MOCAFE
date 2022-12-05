@@ -237,7 +237,7 @@ img {
 }
 
 .header{
-    background-image: url(/images/header-banner.jpeg);
+    background-image: url(images/header-banner.jpeg);
     background-position: center;
     background-size: cover;
     width:100%;
@@ -501,7 +501,7 @@ color: rgb(240, 241, 240);
     }
     
     .account-box1{
-        background-image: url(/images/login-page.jpg);
+        background-image: url(https://caloriesworld.com/wp-content/uploads/2020/03/Carbs-In-Skim-Milk.jpg);
         background-position: top;
         background-size: cover;
         width:200px;
@@ -572,7 +572,7 @@ color: rgb(240, 241, 240);
     }
     
     .signup-box0{
-        background-image: url(/images/login-page.jpg);
+        background-image: url(https://caloriesworld.com/wp-content/uploads/2020/03/Carbs-In-Skim-Milk.jpg);
         background-position: top;
         background-size: cover;
         width:250px;
